@@ -17,10 +17,13 @@ namespace UncomplicatedCustomRoles
         public bool IsEnabled { get; set; } = true;
         [Description("Is the debug mode enabled?")]
         public bool Debug { get; set; } = false;
+        [Description("Display player role info when looked at?")]
+        public bool DisplayRoleInfo { get; set; } = true;
         [Description("A list of custom roles")]
         public List<CustomRole> CustomRoles { get; set; } = new()
         {
             new CustomRole()
         };
+
     }
 }

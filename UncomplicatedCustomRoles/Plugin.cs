@@ -23,6 +23,7 @@ namespace UncomplicatedCustomRoles
         public static Dictionary<int, int> PlayerRegistry = new();
         public static Dictionary<int, int> RolesCount = new();
         public static List<int> RoleSpawnQueue = new();
+        public static bool DisplayCustomInfo;
         public override void OnEnabled()
         {
             Instance = this;
@@ -40,7 +41,7 @@ namespace UncomplicatedCustomRoles
             {
                 SpawnManager.RegisterCustomSubclass(CustomRole);
             }
-
+            DisplayCustomInfo = Config.DisplayRoleInfo;
             base.OnEnabled();
         }
         public override void OnDisabled()
